@@ -1,0 +1,5 @@
+{
+    "directory" : "src/lib",
+    "proxy": "http://webproxy.willmottdixon.co.uk:8080",
+    "https-proxy":"http://webproxy.willmottdixon.co.uk:8080"
+}
