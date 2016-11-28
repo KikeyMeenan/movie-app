@@ -15,10 +15,16 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'node_modules/angular/angular.js',
-      'node_modules/angular-resource/angular-resource.js',
-      'node_modules/angular-mocks/angular-mocks.js',
-      'src/**/*.js',
+      'src/lib/angular/angular.js',
+      'src/lib/angular-resource/angular-resource.js',
+      'src/lib/angular-route/angular-route.js',
+      'src/lib/angular-mocks/angular-mocks.js',
+      'src/lib/angular-bootstrap/ui-bootstrap-tpls.js',
+      'src/movie-app/app.js',
+      'src/movie-app/results.controller.js',
+      'src/movie-app/search.controller.js',
+      'src/movie-core/*.js',
+      'src/omdb/service.js',
       'spec/**/*.js'
     ],
 
@@ -59,7 +65,7 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Chrome'],
+    browsers: ['PhantomJS'],
 
 
     // Continuous Integration mode

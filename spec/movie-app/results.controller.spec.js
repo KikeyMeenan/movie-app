@@ -27,6 +27,7 @@ describe('Results Controller', function(){
     var $rootScope;
     var $scope;
     var omdbApi;
+    var $location;
 
     beforeEach(module('omdb'));
     beforeEach(module('movieApp'));

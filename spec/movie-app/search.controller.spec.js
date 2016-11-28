@@ -1,24 +1,25 @@
-describe('Search Controller', function(){
-    var $this;
-    var $location;
-    var $controller;
+describe('Search Controller', function() {
 
-    beforeEach(module('movieApp'));
+	var $location;
+	var $scope;
 
-    beforeEach(inject(function(_$controller_, _$location_){
-        $controller = _$controller_;
-        $location = _$location_;
-    }));
+	beforeEach(module('movieApp'));
 
-    it('Should redirect to the query results page for non-empty query', function(){
-        $this = $controller('SearchController', {$location: $location}, {query: 'star wars'});
-        $this.search();
-        expect($location.url()).toBe('/results?q=star%20wars');
-    });
+	beforeEach(inject(function(_$controller_, _$location_) {
+		$scope = {};
+		$location = _$location_;
+		_$controller_('SearchController', { $scope: $scope, $location: _$location_ });
+	}));
 
-    it('should not redirect to query results for empty query', function(){
-        $this = $controller('SearchController', {$location: $location}, {query: ''});
-        $this.search();
-        expect($location.url()).toBe('');
-    });
+	it('should redirect to query results for non-empty query', function() {
+		$scope.query = 'star wars';
+		$scope.search();
+		expect($location.url()).toBe('/results?q=star%20wars');
+	});
+
+	it('should not redirect to query results for empty query', function() {
+		$scope.query = '';
+		$scope.search();
+		expect($location.url()).toBe('');
+	});
 });

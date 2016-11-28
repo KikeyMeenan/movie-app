@@ -8,13 +8,24 @@
         <script src="node_modules/jasmine-core/lib/jasmine-core/jasmine-html.js"></script>
         <script src="node_modules/jasmine-core/lib/jasmine-core/boot.js"></script>
 
-        <script src="node_modules/angular/angular.js"></script>
-        <script src="node_modules/angular-resource/angular-resource.js"></script>
-        <script src="node_modules/angular-mocks/angular-mocks.js"></script>
-        
-        <script src="src/omdb/*.js"></script>
+        <script src="src/lib/angular/angular.js"></script>
+        <script src="src/lib/angular-resource/angular-resource.js"></script>
+        <script src="src/lib/angular-route/angular-route.js"></script>
+        <script src="src/lib/angular-mocks/angular-mocks.js"></script>
+        <script src="src/lib/angular-bootstrap/ui-bootstrap-tpls.js"></script>
 
-        <script src="spec/omdb/*.spec.js"></script>
+        <!-- include source files here... -->
+        <script src="src/omdb/service.js"></script>
+        <script src="src/movie-core/service.js"></script>
+        <script src="src/movie-app/app.js"></script>
+        <script src="src/movie-app/results.controller.js"></script>
+        <script src="src/movie-app/search.controller.js"></script>
+
+        <!-- include spec files here... -->
+        <script src="spec/movie-app/results.controller.spec.js"></script>
+        <script src="spec/movie-app/search.controller.spec.js"></script>
+        <script src="spec/movie-core/service.spec.js"></script>
+        <script src="spec/omdb/service.spec.js"></script>
     </head>
 
     <body>
