@@ -18,7 +18,7 @@
                 <p>{{test}}</p>
                 <form ng-submit="search()" class="form-inline-lg">
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Film Title..." ng-model="query">
+                        <input type="text" class="form-control" placeholder="Film Title..." ng-model="query" ng-keyup="keyup()" ng-keydown="keydown()">
                         <span class="input-group-btn">
                             <button class="btn btn-default" type="button" ng-click="search()">Go!</button>
                         </span>
@@ -44,12 +44,15 @@
 
     <script type="text/javascript" src="/lib/angular/angular.js"></script>
     <script type="text/javascript" src="/lib/angular-route/angular-route.js"></script>
+    <script type="text/javascript" src="/lib/angular-resource/angular-resource.js"></script>
     <script type="text/javascript" src="/lib/angular-mocks/angular-mocks.js"></script>
     <script type="text/javascript" src="/lib/angular-bootstrap/ui-bootstrap-tpls.js"></script>
 
-    <script type="text/javascript" src="movie-app/app.js"></script>
     <script type="text/javascript" src="omdb/service.js"></script>
+    <script type="text/javascript" src="movie-core/service.js"></script>
+    <script type="text/javascript" src="movie-app/app.js"></script>
     <script type="text/javascript" src="movie-app/search.controller.js"></script>
     <script type="text/javascript" src="movie-app/results.controller.js"></script>
+    <script type="text/javascript" src="movie-app/home.controller.js"></script>
 </body>
 </html>
