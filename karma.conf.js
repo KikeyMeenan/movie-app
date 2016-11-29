@@ -24,6 +24,7 @@ module.exports = function(config) {
       'src/movie-app/results.controller.js',
       'src/movie-app/search.controller.js',
       'src/movie-app/home.controller.js',
+      'src/movie-app/movie-result.directive.js',
       'src/movie-core/*.js',
       'src/omdb/service.js',
       'spec/**/*.js'
